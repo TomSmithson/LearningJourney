@@ -1,0 +1,24 @@
+.nav { 
+    margin: 0 10rem 0 10rem;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-gap: 5rem;
+    justify-items: start;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.nav h3, p {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-item a:hover {
+    color: skyblue;
+}

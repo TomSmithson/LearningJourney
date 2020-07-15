@@ -1,0 +1,33 @@
+.lesson {
+    width: 50%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin: 0 auto;
+}
+
+.lesson-title {
+    justify-self: flex-start;
+}
+
+.lesson-title h5 {
+    margin: 0;
+    margin-top: 3rem;
+}
+
+.lesson-date {
+    justify-self: flex-start;
+}
+
+.lesson-date p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.7rem;
+}
+
+.lesson-image img {
+    width: 40%;
+}
