@@ -3,14 +3,14 @@ import "./app.styles.css";
 
 import Nav from "./components/nav/nav.component";
 import Header from "./components/header/header.component";
-import Lesson from "./components/lesson/lesson.component";
+import LessonList from "./components/lesson-list/lesson-list.component";
 
 export default class App extends Component {
     constructor() {
         super();
         this.state = {
             date: "",
-        }
+        };
     }
 
     componentDidMount = () => {
@@ -30,8 +30,7 @@ export default class App extends Component {
             <div className="container">
                 <Nav date={this.state.date}/>
                 <Header/>
-                <hr></hr>
-                {/* <Lesson/> */}
+                <LessonList/>
             </div>
         );
     }
