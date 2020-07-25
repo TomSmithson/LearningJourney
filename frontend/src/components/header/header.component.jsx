@@ -5,9 +5,6 @@ class Header extends Component {
     render() {
         return (
             <div className="header">
-                <div className="title">
-                    <h2>Feynman Technique Journey</h2>
-                </div>
                 <div className="image">
                     <img src="Feynman.jpg" alt="Richard Feynman"/>
                 </div>

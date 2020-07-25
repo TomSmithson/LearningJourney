@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import "./app.styles.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Nav from "./components/nav/nav.component";
+import Header from "./components/header/header.component";
+import Lesson from "./components/lesson/lesson.component";
+
+export default class App extends Component {
+    constructor() {
+        super();
+        this.state = {
+            date: "",
+        }
+    }
+
+    componentDidMount = () => {
+        const options = {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            timeZoneName: "short",
+        };
+        const date = new Date().toLocaleDateString("en-GB", options);
+        this.setState({date: date});
+    }
+
+    render() {
+        return (
+            <div className="container">
+                <Nav date={this.state.date}/>
+                <Header/>
+                <hr></hr>
+                {/* <Lesson/> */}
+            </div>
+        );
+    }
 }
-
-export default App;
